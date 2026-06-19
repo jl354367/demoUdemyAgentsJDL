@@ -1,0 +1,34 @@
+Deployment to EC2 guide
+
+.......#1 Create an EC2 and update...............
+sudo su
+sudo yum update -y (update all softwares installed in EC2 instance)
+
+
+.......#2 Create GitHub repo and upload code to repo...........
+yum install git
+git clone https://github.com/jl354367/demoUdemyAgentsJDL.git
+
+.......Update and install pre-req........
+cd into folder
+sudo yum remove python3-requests (remove python)
+sudo yum install python3 -y
+sudo yum -y install python-pip
+python3 -m pip install -r requirements.txt
+EC2 IAM role (create new IAM role ; assign Bedrock access to the role. Then go to EC2 instance -
+....Actions - Security - Modify IAM Role)
+streamlit run app.py
+nohup streamlit run app.py (run app from backend)
+Go to EC2 instance , Security - Security Group , Inbound Rules - Edit inbound rules.
+Add Custom TCP , port 8501
+Change to Security Group - Open port 8501 to all traffic
+
+.......ALB Deployment............
+Streamlit port - 8501
+
+...........Test Questions.................
+
+What is the room availability for 2025-12-26 ?
+Book a hotel room for Date of Booking - 2025-12-27, Name - John Doe K, Number of days - 2, Room type - Sea view
+
+
