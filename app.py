@@ -12,14 +12,13 @@ import yaml
 load_dotenv()
 
 # Configure logging using YAML
-#if os.path.exists("logging.yaml"):
- #   with open("logging.yaml", "r") as file:
-  #      config = yaml.safe_load(file)
-   #     logging.config.dictConfig(config)
+# if os.path.exists("logging.yaml"):
+#   with open("logging.yaml", "r") as file:
+#      config = yaml.safe_load(file)
+#     logging.config.dictConfig(config)
 #else:
- #   log_level = getattr(logging, os.environ.get("LOG_LEVEL", "INFO").upper(), logging.INFO)
-  #  logging.basicConfig(level=log_level)
-
+#   log_level = getattr(logging, os.environ.get("LOG_LEVEL", "INFO").upper(), logging.INFO)
+#  logging.basicConfig(level=log_level)
 #logger = logging.getLogger(__name__)
 
 # Get config from environment variables

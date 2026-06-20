@@ -1,4 +1,0 @@
-pip install boto3==1.43.27
-pip install python-dotenv==1.0
-pip install streamlit==1.43.1
-pip install PyYAML==6.0.3
