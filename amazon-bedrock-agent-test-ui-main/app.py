@@ -12,15 +12,15 @@ import yaml
 load_dotenv()
 
 # Configure logging using YAML
-if os.path.exists("logging.yaml"):
-    with open("logging.yaml", "r") as file:
-        config = yaml.safe_load(file)
-        logging.config.dictConfig(config)
-else:
-    log_level = logging.getLevelNamesMapping()[(os.environ.get("LOG_LEVEL", "INFO"))]
-    logging.basicConfig(level=log_level)
-
-logger = logging.getLogger(__name__)
+# if os.path.exists("logging.yaml"):
+#     with open("logging.yaml", "r") as file:
+#         config = yaml.safe_load(file)
+#         logging.config.dictConfig(config)
+# else:
+#     log_level = logging.getLevelNamesMapping()[(os.environ.get("LOG_LEVEL", "INFO"))]
+#     logging.basicConfig(level=log_level)
+#
+# logger = logging.getLogger(__name__)
 
 # Get config from environment variables
 #agent_id = os.environ.get("BEDROCK_AGENT_ID")
